@@ -9,6 +9,7 @@ target 'TMDbMoviesList' do
 
     pod 'Kingfisher'
     pod 'Moya', '~> 13.0.0'
+    pod 'Alamofire'
 
   target 'TMDbMoviesListTests' do
     inherit! :search_paths

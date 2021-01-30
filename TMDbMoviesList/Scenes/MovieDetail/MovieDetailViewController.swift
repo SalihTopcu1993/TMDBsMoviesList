@@ -7,24 +7,30 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieDetailViewController: UIViewController {
 
+    @IBOutlet private weak var movieImgView: UIImageView?
+    @IBOutlet private weak var posterImgView: UIImageView?
+    @IBOutlet private weak var overviewLabel: UILabel?
+    
+    var viewModel: MovieDetailViewModelProtocol!
+    
+    //MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewModel.delegate = self
+        viewModel.load()
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//MARK: DELEGATE
+extension MovieDetailViewController: MovieDetailViewModelDelegate {
+    func showDetail(_ presentation: MovieDetailPresentation) {
+        self.title = presentation.title
+        movieImgView?.kf.setImage(with: URL(string: presentation.imageURL))
+        posterImgView?.kf.setImage(with: URL(string: presentation.posterImageURL))
+        overviewLabel?.text = presentation.overview
     }
-    */
-
 }

@@ -10,11 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var viewModel: MovieListViewModelProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewModel?.delegate = self
+        viewModel?.load()
     }
+}
 
-
+extension ViewController: MovieListViewModelDelegate {
+    func handleViewModelOutput(_ output: MovieListViewModelOutput) {
+        print("")
+    }
+    
+    func navigate(to route: MovieListViewRoute) {
+        print("")
+    }
+    
+    
 }
 

@@ -1,0 +1,6 @@
+framework module Pods_TMDbMoviesList_TMDbMoviesListUITests {
+  umbrella header "Pods-TMDbMoviesList-TMDbMoviesListUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

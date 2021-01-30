@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+final class MovieDetailViewModel: MovieDetailViewModelProtocol {
+    
+    weak var delegate: MovieDetailViewModelDelegate?
+    private let presentation: MovieDetailPresentation
+    
+    init(presentation: MovieDetailPresentation) {
+        self.presentation = presentation
+    }
+    
+    func load() {
+        delegate?.showDetail(presentation)
+    }
+}

@@ -6,4 +6,12 @@
 //  Copyright © 2021 Salih Topcu. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct MovieDetailPresentation: Equatable {
+    let title: String
+    let posterImageURL: String
+    let imageURL: String
+    let overview: String
+    let artistName: String
+}

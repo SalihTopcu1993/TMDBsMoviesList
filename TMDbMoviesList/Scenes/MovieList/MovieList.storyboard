@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie List View Controller-->
         <scene sceneID="HoW-er-0ct">
             <objects>
-                <viewController id="Pne-ZI-WE0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieListViewController" id="Pne-ZI-WE0" customClass="MovieListViewController" customModule="TMDbMoviesList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DCX-Ys-ewh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pne-ZI-WE0" id="EDR-tk-7Hs"/>
+                                    <outlet property="delegate" destination="Pne-ZI-WE0" id="rri-dz-Pqg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xN2-bY-P6l"/>
@@ -57,6 +61,9 @@
                             <constraint firstItem="xN2-bY-P6l" firstAttribute="trailing" secondItem="Vre-CY-cJU" secondAttribute="trailing" id="YMp-hj-kKA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vre-CY-cJU" id="NgP-fX-7FL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWn-ro-FUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
