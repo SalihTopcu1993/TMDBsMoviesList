@@ -8,9 +8,11 @@
 
 import UIKit
 
+let MOVIE_LIST_CELL = "MovieListCell"
+
 class MovieListViewController: UIViewController {
     
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView?
     
     private var movieList: [Results] = []
     var viewModel: MovieListViewModelProtocol! {
@@ -21,6 +23,7 @@ class MovieListViewController: UIViewController {
     //MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView?.isHidden = true
         viewModel.load()
     }
 }
@@ -35,7 +38,8 @@ extension MovieListViewController: MovieListViewModelDelegate {
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
         case .showMovieList(let movieList):
             self.movieList = movieList
-            tableView.reloadData()
+            tableView?.reloadData()
+            tableView?.isHidden = false
         }
     }
     
@@ -62,10 +66,9 @@ extension MovieListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: MOVIE_LIST_CELL, for: indexPath) as! MovieListTableViewCell
         let movie = movieList[indexPath.row]
-        cell.textLabel?.text = movie.name
-        cell.detailTextLabel?.text = String(movie.voteAverage ?? 0.0)
+        cell.setupUI(movie: movie)
         return cell
     }
 }

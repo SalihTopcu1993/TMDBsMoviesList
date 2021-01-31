@@ -33,6 +33,7 @@
 		17AF84CE25C5D05B009D2195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF84CD25C5D05B009D2195 /* ViewController.swift */; };
 		17AF84D425C5D07D009D2195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AF84D225C5D07D009D2195 /* Main.storyboard */; };
 		17AF84DC25C5D0BF009D2195 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF84DB25C5D0BF009D2195 /* SceneDelegate.swift */; };
+		17AF84F925C6CAF5009D2195 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF84F825C6CAF5009D2195 /* MovieListTableViewCell.swift */; };
 		CC72F279CEB0AA2A1A953AF4 /* Pods_TMDbMoviesListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92CE8ECCBE5FFCF13403FD4 /* Pods_TMDbMoviesListTests.framework */; };
 		FE75C7C27231957899CF7480 /* Pods_TMDbMoviesList_TMDbMoviesListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059B4B1CC04F1FF51026A102 /* Pods_TMDbMoviesList_TMDbMoviesListUITests.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		17AF84CD25C5D05B009D2195 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = TMDbMoviesList/ViewController.swift; sourceTree = "<group>"; };
 		17AF84D325C5D07D009D2195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TMDbMoviesList/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17AF84DB25C5D0BF009D2195 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		17AF84F825C6CAF5009D2195 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		184AAF95D8879A269DF376B9 /* Pods-TMDbMoviesList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDbMoviesList.release.xcconfig"; path = "Target Support Files/Pods-TMDbMoviesList/Pods-TMDbMoviesList.release.xcconfig"; sourceTree = "<group>"; };
 		45ABE680B638CA658837EDB0 /* Pods-TMDbMoviesList-TMDbMoviesListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDbMoviesList-TMDbMoviesListUITests.release.xcconfig"; path = "Target Support Files/Pods-TMDbMoviesList-TMDbMoviesListUITests/Pods-TMDbMoviesList-TMDbMoviesListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C4404942CFD640D4EC54C71 /* Pods-TMDbMoviesList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDbMoviesList.debug.xcconfig"; path = "Target Support Files/Pods-TMDbMoviesList/Pods-TMDbMoviesList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		17AF840725C58BCF009D2195 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				17AF84F725C6CAAE009D2195 /* View */,
 				17AF840925C58E96009D2195 /* MovieList.storyboard */,
 				17AF841B25C59030009D2195 /* MovieListBuilder.swift */,
 				17AF842025C59044009D2195 /* MovieListContracts.swift */,
@@ -282,6 +285,22 @@
 				17AF84BC25C5B5DF009D2195 /* MovieDetailPresentation.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		17AF84F725C6CAAE009D2195 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17AF850025C6CD84009D2195 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17AF850025C6CD84009D2195 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				17AF84F825C6CAF5009D2195 /* MovieListTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		41BC6AEFC4905FBF6814B34F /* Frameworks */ = {
@@ -566,6 +585,7 @@
 				17AF83EE25C58928009D2195 /* MovieListService.swift in Sources */,
 				17AF84BD25C5B5DF009D2195 /* MovieDetailPresentation.swift in Sources */,
 				1728E6E525C57121008E37A1 /* Constants.swift in Sources */,
+				17AF84F925C6CAF5009D2195 /* MovieListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

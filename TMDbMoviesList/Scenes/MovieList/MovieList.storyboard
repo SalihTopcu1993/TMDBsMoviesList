@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieListCell" textLabel="dmb-Td-SlJ" detailTextLabel="Nap-go-vqB" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Qs0-qH-fy2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieListCell" textLabel="dmb-Td-SlJ" detailTextLabel="Nap-go-vqB" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Qs0-qH-fy2" customClass="MovieListTableViewCell" customModule="TMDbMoviesList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qs0-qH-fy2" id="hy3-gy-tRT">
@@ -44,6 +44,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ratingLabel" destination="Nap-go-vqB" id="8oc-CW-XrY"/>
+                                            <outlet property="titleLabel" destination="dmb-Td-SlJ" id="2GI-Ud-rHq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
